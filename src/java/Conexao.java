@@ -18,7 +18,7 @@ public final class Conexao {
         }
     }
 
-    public static void close(ResultSet rs, Statement st, Connection conn) {
+    public static void close(ResultSet rs, PreparedStatement st, Connection conn) {
         if (rs != null) {
             try {
                 rs.close();
@@ -39,7 +39,7 @@ public final class Conexao {
         }
     }
 
-    public static void close(Statement st, Connection conn) {
+    public static void close(PreparedStatement st, Connection conn) {
         close(null, st, conn);
     }
 

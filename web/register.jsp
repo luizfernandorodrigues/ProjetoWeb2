@@ -16,12 +16,12 @@ teste comiit
     </head>
     <body>
         <h2>Registrar</h2>
-        <form action="" name="cadastro" style="border:1px solid #ccc" method="POST">
+        <form action="ManipulaBanco.jsp" name="cadastro" style="border:1px solid #ccc" method="POST">
             <div class="container">
                 <label><b>Nome</b></label>
                 <input type="text" placeholder="Entrar com Nome" name="nome" required>
-                <label><b>Email</b></label>
-                <input type="email" placeholder="Entrar com Email" name="mail" required>
+                <label><b>Login</b></label>
+                <input type="text" placeholder="Entrar com login" name="login" required>
                 <label><b>Senha</b></label>
                 <input type="password" placeholder="Entrar com a senha" name="senha" required>
                 <label><b>Repetir Senha</b></label>
