@@ -2,6 +2,7 @@
     Document   : register
     Created on : 16/05/2017, 20:32:53
     Author     : luizf
+teste comiit
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
