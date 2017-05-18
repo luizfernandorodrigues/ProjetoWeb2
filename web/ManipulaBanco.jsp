@@ -28,7 +28,7 @@
             String senha = request.getParameter("senha");
 
             // abre conexao com o banco
-            Conexao.open();
+           
 
             String sql = "INSERT INTO USUARIO (USU_NOME,USU_LOGIN,USU_SENHA) VALUES(?,?,?)";
 
