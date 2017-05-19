@@ -1,4 +1,4 @@
-package java;
+package bla;
 
 import java.sql.*;
 import java.util.logging.Level;
@@ -8,7 +8,7 @@ public final class Conexao {
 
     private static final String usuario = "postgres";
     private static final String senha = "123456";
-    private static final String url = "jdbc:postgresql://127.0.0.1:5432/Autentica";
+    private static final String url = "jdbc:postgresql://127.0.0.1:5432/Autentica2";
 
     public static Connection open() {
         try {
