@@ -46,6 +46,8 @@
                 ps.close();
                 Conexao.close(ps, conn);
             }
+            
+            response.sendRedirect("index.jsp");
         %>
     </body>
 </html>

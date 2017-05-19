@@ -50,6 +50,11 @@ teste comiit
                     alert("As Senhas Não Corresponde!!");
                 }
             }
+            
+            //função para criar hash
+            function CriarHash(){
+                
+            }
         </script>
     </body>
 </html>
