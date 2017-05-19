@@ -1,6 +1,13 @@
 body{
     margin: 0;
 }
+.register{
+    font-family: monospace;
+    color:#dadeeb;
+    font-size:13px;
+    float: right;
+    padding: 7px 65px;
+}
 .fundo{
     display:inline-block;
     width:100%;
@@ -51,7 +58,7 @@ body{
     color:#dadeeb;
     font-size:10px;
     float: right;
-    padding: 12px 20px;
+    padding: 12px 40px;
 }
 .login input[type=text], input[type=password]{
     width: 100%;

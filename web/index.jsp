@@ -24,7 +24,27 @@
             </nav>
             <!-- form de login-->
             <div class="login">
-                
+                <h1>Login</h1>
+                <form method="post" action="login.jsp">
+                    <table>
+                        <tr>
+                            <th>Login: </th>
+                            <td><input type="text" name="login"
+                                       value="${param.login}"/></td>
+                        </tr>
+                        <tr>
+                            <th>Senha: </th>
+                            <td><input type="password" name="senha" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> 
+                                <input type="submit" name="bOK" value="Entrar"/>
+                                <a class = "register" href ="${pageContext.request.contextPath}/register.jsp">Registrar</a>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </form>
             </div>
             <button type="button" class="icon-custom-menu  fadeInLeft is-closed" data-toggle="offcanvas">
                 <span class="icon-top"></span>
