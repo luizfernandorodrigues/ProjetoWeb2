@@ -1,6 +1,13 @@
 body{
     margin: 0;
 }
+#erro {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid red;
+    background-color: beige;
+    font-size: 15px;
+}
 .register{
     font-family: monospace;
     color:#dadeeb;
@@ -54,20 +61,19 @@ body{
     top: 7px;
 }
 .login{
-    font-family: monospace;
-    color:#dadeeb;
-    font-size:10px;
+
     float: right;
-    padding: 12px 40px;
+    padding: 12px 65px;
 }
-.login input[type=text], input[type=password]{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    float: right;
+.login input{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
 }
+.login a:hover{
+    color: #FF0000;
+} 
 .login button{
     background-color: #4CAF50;
     color: white;

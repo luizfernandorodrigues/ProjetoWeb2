@@ -25,25 +25,22 @@
             <!-- form de login-->
             <div class="login">
                 <h1>Login</h1>
-                <form method="post" action="login.jsp">
-                    <table>
+                <form name="form1" method="post" action="logar.jsp">
+                    <table width="180" border="0" align="center" cellpadding="0" cellspacing="1">
                         <tr>
-                            <th>Login: </th>
-                            <td><input type="text" name="login"
-                                       value="${param.login}"/></td>
+                            <td width="55">Login:</td>
+                            <td width="122"><input name="login" type="text" id="login"></td>
                         </tr>
                         <tr>
-                            <th>Senha: </th>
-                            <td><input type="password" name="senha" /></td>
+                            <td height="18">Senha:</td>
+                            <td><input name="senha" type="password" id="senha"></td>
                         </tr>
                         <tr>
-                            <td colspan="2"> 
-                                <input type="submit" name="bOK" value="Entrar"/>
-                                <a class = "register" href ="${pageContext.request.contextPath}/register.jsp">Registrar</a>
-                            </td>
+                            <td colspan="2"><div align="center">
+                                    <input type="submit" name="Submit" value="Logar">
+                                </div></td>
                         </tr>
                     </table>
-                    
                 </form>
             </div>
             <button type="button" class="icon-custom-menu  fadeInLeft is-closed" data-toggle="offcanvas">
