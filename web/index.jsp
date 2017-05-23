@@ -24,8 +24,7 @@
             </nav>
             <!-- form de login-->
             <div class="login">
-                <h1>Login</h1>
-                <form name="form1" method="post" action="logar.jsp">
+                <form name="form1" method="post" action="login.jsp">
                     <table width="180" border="0" align="center" cellpadding="0" cellspacing="1">
                         <tr>
                             <td width="55">Login:</td>
@@ -37,8 +36,9 @@
                         </tr>
                         <tr>
                             <td colspan="2"><div align="center">
-                                    <input type="submit" name="Submit" value="Logar">
+                                    <input type="submit" name="Submit" value="Logar" onclick="verifica()">
                                 </div></td>
+                        <a href="register.jsp">Registrar</a>
                         </tr>
                     </table>
                 </form>
@@ -302,6 +302,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        function verifica() {
+            login = document.form1.login.value;
+            senha = document.form1.senha.value;
+            if (senha == "" && login == "") {
+                alert("Preencha os campos!!");
+                window.self.location.href = "index.jsp";;
+            }
+        }
+    </script>
 </body>
 </html>
 

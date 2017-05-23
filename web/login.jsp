@@ -5,10 +5,6 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="bla.Conexao"%>
 <%@page import="java.sql.Connection"%>
-<%
-    String login = "teste"; // Login
-    String senha = "123"; // Senha
-%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
@@ -33,11 +29,10 @@
         </style>
     </head> <body>
         <%
-
             String login_form = request.getParameter("login"); // Pega o Login vindo do formulário
             String senha_form = request.getParameter("senha"); //Pega a senha vinda do formulário
             Usuario user = new Usuario();
-/*
+
             Connection conn = Conexao.open();
             PreparedStatement ps = null;
             ResultSet rs = null;
@@ -51,12 +46,10 @@
                 user.setSenha(rs.getString("usu_senha"));
             }
             Conexao.close(rs, ps, conn);
-            user.getLogin()
-            user.getSenha()
-*/
+            
             if (user.getNome() != null) {
-                if (login_form.equals(login)
-                        && senha_form.equals(senha)) { //Caso login e senha estejam corretos...
+                if (login_form.equals(user.getLogin())
+                        && senha_form.equals(user.getSenha())) { //Caso login e senha estejam corretos...
                     out.println("Logado com sucesso."); //Mostra na tela que foi logado com sucesso
                     out.println("Logado com sucesso."); //Mostra na tela que foi logado com sucesso
                     session.putValue("loginUsuario", login_form); //Grava a session com o Login
@@ -64,8 +57,13 @@
                     //out.println("<script>document.location.href='logado.jsp';</script>");
                     response.sendRedirect("logado.jsp");
                 } else { //Se estiverem incorretos...
-                    out.println("Login ou senha inválidos. <a href='java script:back()'>Voltar</a>"); //Exibe na tela e pede para voltar
+                    out.println("Senha inválida." + "<a href=index.jsp>Voltar</a>"); //Exibe na tela e pede para voltar
                 }
+            }else if(user.getNome() == null && !login_form.isEmpty()){
+                System.out.println("ENTROU NESSA MERDA");
+                out.println("Usuario invalido ou inexistente!" + "<a href=index.jsp>Voltar</a>");
+            }else if(user.getNome() == null && login_form.isEmpty()){
+                response.sendRedirect("index.jsp");
             }
         %>
     </body>
