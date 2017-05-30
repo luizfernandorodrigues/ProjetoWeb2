@@ -10,16 +10,22 @@ package bla;
       private String nome;
       private String login;
       private String senha;
+      private String email;
+      private String adm;
+      private String end;
    
       public Usuario() {
-          this(null, null, null, null);
+          this(null, null, null, null, null, null, null);
       }
    
-      public Usuario(Integer codigo, String nome, String login, String senha) {
+      public Usuario(Integer codigo, String nome, String login, String senha, String email, String adm, String end) {
           this.codigo = codigo;
           this.nome = nome;
           this.login = login;
           this.senha = senha;
+          this.email = email;
+          this.adm = adm;
+          this.end = end;
       }
    
       public Integer getCodigo() {
@@ -52,6 +58,29 @@ package bla;
    
       public void setSenha(String senha) {
           this.senha = senha;
+      }
+      public String getEmail() {
+          return email;
+      }
+   
+      public void setEmail(String email) {
+          this.email = email;
+      }
+      
+      public String getAdm() {
+          return adm;
+      }
+   
+      public void setAdm(String adm) {
+          this.adm = adm;
+      }
+      
+      public String getEnd() {
+          return end;
+      }
+   
+      public void setEnd(String end) {
+          this.end = end;
       }
    
    

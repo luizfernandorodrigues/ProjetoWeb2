@@ -27,9 +27,13 @@ teste comiit
                 <input type="password" placeholder="Entrar com a senha" name="senha" required>
                 <label><b>Repetir Senha</b></label>
                 <input class="senha-repetir" type="password" placeholder="Confirmar Senha" name="senha_repetir" required>
+                <label><b>Endereço</b></label>
+                <input type="text" placeholder="Entrar com Endereço" name="end" required>
+                <label><b>E-mail</b></label>
+                <input type="text" placeholder  ="Entrar com E-mail" name="email" required>
                 <input type="checkbox" checked="checked"> Lembrar me
                 <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancelar</button>
+                    <button type="button" class="cancelbtn" onclick="Redireciona()">Cancelar</button>
                     <button type="submit" class="signupbtn" onclick="ValidarSenha()">Registrar</button>
                 </div>
             </div>
@@ -47,13 +51,16 @@ teste comiit
                 senha2 = document.cadastro.senha_repetir.value;
 
                 if (senha1 !== senha2) {
-                    alert("As Senhas Não Corresponde!!");
+                    alert("As Senhas Não Correspondem!!");
                 }
             }
-            
+            function Redireciona() {
+                window.self.location.href = "index.jsp";
+            }
+
             //função para criar hash
-            function CriarHash(){
-                
+            function CriarHash() {
+
             }
         </script>
     </body>

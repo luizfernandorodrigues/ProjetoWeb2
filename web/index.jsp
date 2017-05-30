@@ -49,6 +49,13 @@
                 <span class="icon-bottom"></span>
             </button>
         </div>
+        <div class = "conteudo">
+            <form name="postarTxt" method="post" action="postar.jsp">
+                <textarea name = "conteudoTxt" rows="10" cols="40" maxlength="500"></textarea>
+                <input type="submit" name="Submit" value="Postar">
+            </form>
+            <a href="conteudoPostado.jsp">Posts</a>
+        </div>
         <header>
             <img class = "fundo" src = "bg-header-star.jpg">
             <div id="banner-home">
@@ -308,7 +315,8 @@
             senha = document.form1.senha.value;
             if (senha == "" && login == "") {
                 alert("Preencha os campos!!");
-                window.self.location.href = "index.jsp";;
+                window.self.location.href = "index.jsp";
+                ;
             }
         }
     </script>

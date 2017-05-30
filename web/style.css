@@ -1,19 +1,24 @@
 body{
     margin: 0;
 }
-#erro {
-    width: 80%;
-    margin: 0 auto;
-    border: 1px solid red;
-    background-color: beige;
-    font-size: 15px;
+.postado {
+    display: inline-block;
+}
+.sair{
+    float:right;
 }
 .register{
     font-family: monospace;
     color:#dadeeb;
     font-size:13px;
     float: right;
-    padding: 7px 65px;
+    padding: 7px 80px;
+}
+.conteudo{
+    float: right;
+    padding: 550px 500px;
+    display: inline-block;
+    position: absolute;
 }
 .fundo{
     display:inline-block;
